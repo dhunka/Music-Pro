@@ -4,26 +4,34 @@ import React, { useState } from 'react'
 import './Productos.scss'
 
 const Productos = () => {
+
   const catId = parseInt(useParams().id)
+
   const [maxPrice,setMaxPrice] = useState(1000)
-  const{sort,setSort} = useState(null)
+
+  const [sort, setSort] = useState(null);
+
   return (
     <div className='productos'>
       <div className="left">
         <div className="filterItem">
           <h2>Categoria de productos</h2>
+
           <div className="inputItem">
             <input type="checkbox" id="1" value={1}/>
             <label htmlFor="1">Baterias</label>
           </div>
+
           <div className="inputItem">
             <input type="checkbox" id="2" value={2}/>
             <label htmlFor="2">bajos</label>
           </div>
+
           <div className="inputItem">
             <input type="checkbox" id="3" value={3}/>
             <label htmlFor="3">guitarras</label>
           </div>
+
         </div>
         <div className="filterItem">
           <h2>Filtrados por precio</h2>
@@ -41,7 +49,7 @@ const Productos = () => {
       </div>
       <div className="right">
         <img className='catImg' 
-        src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress=tinysrgb&w=1600" 
+        src="https://img.freepik.com/fotos-premium/fila-guitarras-acusticas-electricas-diferentes-colores-tienda-instrumentos-musicales_210545-1067.jpg" 
         alt="" />
         <List catId={catId} maxPrice={maxPrice} sort={sort}/>
       </div>
