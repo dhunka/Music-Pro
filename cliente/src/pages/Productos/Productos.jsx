@@ -43,9 +43,16 @@ const Productos = () => {
         </div>
         <div className="filterItem">
           <h2>Ordenados por</h2>
-          <input type="radio" name="price" id="asc" value= "asc" onChange={e => setSort("desc")}/>
-          <label htmlFor="asc">Precio(Bajos primero)</label>
+          <div className='inputItem'>
+            <input type="radio" name="price" id="asc" value= "asc" onChange={e => setSort("asc")}/>
+            <label htmlFor="asc">Precio(Bajos primero)</label>
+          </div>
+          <div className='inputItem'>
+            <input type="radio" name="price" id="desc" value= "desc" onChange={e => setSort("desc")}/>
+            <label htmlFor="asc">Precio(Más alto primero)</label>
+          </div>
         </div>
+
       </div>
       <div className="right">
         <img className='catImg' 

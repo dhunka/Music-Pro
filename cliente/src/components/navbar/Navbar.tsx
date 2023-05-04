@@ -10,7 +10,7 @@ import "./navbar.scss";
 class Navbar extends Component {
   render() {
     return (
-      <div className="navbar bg-green-300">
+      <div className="navbar">
         <div className="wrapper ">
         <div className="left">
           <div className="item">
