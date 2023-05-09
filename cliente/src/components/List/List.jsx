@@ -1,6 +1,6 @@
-import React from 'react'
-import './List.scss'
-import Card from '../Card/Card'
+import React from 'react';
+import './List.scss';
+import Card from '../Card/Card';
 export const List = () => {
 
     const data =[
