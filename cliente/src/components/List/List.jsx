@@ -14,7 +14,7 @@ export const List = () => {
         {
           id:2,
           img:"https://www.escuelaacordes.com/sites/default/files/styles/large_retina/public/portfolio/Bateria.jpg?itok=HtzeuvOj",
-          title:"guitarra electrica",
+          title:"Bajo",
           oldPrice:17,
           Price:12,
         },
