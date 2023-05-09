@@ -23,7 +23,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link to="/products/1" className="link">
+            <Link className="link" to="/productos/1">
               Teclados 
             </Link>
           </button>
