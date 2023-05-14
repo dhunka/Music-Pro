@@ -47,9 +47,6 @@ Los bajos GSR ofrecen la famosa sofisticación, comodidad, tono y facilidad de t
           <div className="item">
             <FavoriteBorderIcon /> AÑADIR A LISTA DE DESEOS
           </div>
-          <div className="item">
-            <BalanceIcon /> COMPARAR PRODUCTOS
-          </div>
         </div>
         <div className="info">
           <span>Marca: Ibanez</span>

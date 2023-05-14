@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
 import "./navbar.scss";
-import { Card } from "@mui/material";
+import Cart from '../Cart/Cart';
 
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {open && <Card/>}
+      {open && <Cart/>}
     </div>
   );
 };
