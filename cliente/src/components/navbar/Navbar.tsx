@@ -7,6 +7,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import Cart from '../Cart/Cart';
+import Login from "./pages/Login/Login";
+
 
 
 const Navbar = () => {
@@ -30,7 +32,9 @@ const Navbar = () => {
         <div className="right">
           <div className="icons">
             <SearchIcon/>
-            <PersonOutlineOutlinedIcon/>
+            <Link className="link" to ="/login">
+              <PersonOutlineOutlinedIcon/>
+            </Link>
             <FavoriteBorderOutlinedIcon/>
             <div className="cartIcon" onClick={()=>setOpen(!open)}>
               <ShoppingCartOutlinedIcon/>
