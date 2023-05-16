@@ -1,42 +1,22 @@
-import React from 'react';
-import './List.scss';
-import Card from '../Card/Card';
-export const List = () => {
+import React from "react";
+import "./List.scss";
+import Card from "../Card/Card";
+import useFetch from "../../hooks/useFetch";
 
-    const data =[
-        {
-          id:1,
-          img:"https://www.superprof.cl/blog/wp-content/uploads/2017/02/caracteristicas-guitarra.jpg",
-          title:"guitarra electrica",
-          oldPrice:19,
-          Price:12,
-        },
-        {
-          id:2,
-          img:"https://www.escuelaacordes.com/sites/default/files/styles/large_retina/public/portfolio/Bateria.jpg?itok=HtzeuvOj",
-          title:"Bajo",
-          oldPrice:17,
-          Price:12,
-        },
-        {
-          id:3,
-          img:"https://www.escuelaacordes.com/sites/default/files/styles/large_retina/public/portfolio/Bateria.jpg?itok=HtzeuvOj",
-          title:"guitarra electrica",
-          oldPrice:17,
-          Price:12,
-        },
-        {
-          id:4,
-          img:"https://www.escuelaacordes.com/sites/default/files/styles/large_retina/public/portfolio/Bateria.jpg?itok=HtzeuvOj",
-          title:"guitarra electrica",
-          oldPrice:17,
-          Price:12,
-        },
-      ];
+const List = ({ subCats, maxPrice, sort, catId }) => {
+  const { data, loading, error } = useFetch(
+    `/productoss?populate=*&[filters][categories][id]=${catId}${subCats.map(
+      (item) => `&[filters][sub_categories][id][$eq]=${item}`
+    )}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+  );
 
   return (
-    <div className="list"> {data?.map(item=>(
-        <Card item={item} key={item.id}/>
-    ))}</div>
-  )
-}
+    <div className="list">
+      {loading
+        ? "loading"
+        : data?.map((item) => <Card item={item} key={item.id} />)}
+    </div>
+  );
+};
+
+export default List;
