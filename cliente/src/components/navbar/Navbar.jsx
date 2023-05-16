@@ -5,9 +5,17 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD:cliente/src/components/navbar/Navbar.jsx
 import "./Navbar.scss"
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+=======
+import "./navbar.scss";
+import Cart from '../Cart/Cart';
+import Login from "./pages/Login/Login";
+
+
+>>>>>>> 1e219d3512ff0062956c30dbfd814091ec237939:cliente/src/components/navbar/Navbar.tsx
 
 const Navbar = () => {
   const [open,setOpen] = useState(false)
@@ -34,7 +42,9 @@ const Navbar = () => {
        
           <div className="icons">
             <SearchIcon/>
-            <PersonOutlineOutlinedIcon/>
+            <Link className="link" to ="/login">
+              <PersonOutlineOutlinedIcon/>
+            </Link>
             <FavoriteBorderOutlinedIcon/>
             <div className="cartIcon" onClick={()=>setOpen(!open)}>
               <ShoppingCartOutlinedIcon/>
